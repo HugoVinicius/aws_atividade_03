@@ -1,4 +1,4 @@
-# Laboratório 03 - API Gateway com o Ocelot
+# Laboratório 03
 Disciplina: APIS E WEB SERVICES (AWS)<br/>
 Professor: Marco Mendes<br/>
 Aluno: Hugo Vinicius Reis Vaz<br/>
