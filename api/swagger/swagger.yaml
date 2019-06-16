@@ -1,0 +1,253 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: "AWS Atividade 03 - Hugo Vinicius"    
+  contact:
+    email: "hugo.desenvolvimento@outlook.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+# during dev, should point to your local machine
+host: localhost:3000
+# basePath prefixes all resource paths 
+basePath: /
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /Catalogo:
+    get:
+      x-swagger-router-controller: catalogoController
+      tags:
+      - "Catalogo"
+      summary: "Lista de Catalogo"
+      description: "retorna uma lista de catalogo"
+      operationId: "CatalogosGET"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Array de catalogo"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Catalogo"
+        400:
+          description: "Falha nos parâmtros de entrada" 
+    post:
+      x-swagger-router-controller: catalogoController      
+      tags:
+      - "Catalogo"
+      summary: "Adiciona catalogo"
+      description: "Adiciona catalogo"
+      operationId: "addCatalogos"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Categoria incluida"
+        400:
+          description: "Falha ao incluir categora"       
+    put:
+      x-swagger-router-controller: catalogoController      
+      tags:
+      - "Catalogo"
+      summary: "Atualiza catalogo"
+      description: "Atualiza catalogo"
+      operationId: "updateCatalogos"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Categoria atualizada"
+        400:
+          description: "Falha ao incluir Categoria"        
+    delete:       
+      x-swagger-router-controller: catalogoController      
+      tags:
+      - "Catalogo" 
+      summary: "Atualiza catalogo"
+      description: "Atualiza catalogo"
+      operationId: "deleteOrder"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Excluido com sucesso"
+        400:
+          description: "Falha ao excluir Categoria"    
+  /Pedido:
+    get:
+      x-swagger-router-controller: pedidoController
+      tags:
+      - "Pedido"
+      summary: "Lista de Pedido"
+      description: "retorna uma lista de Pedido"
+      operationId: "PedidoGET"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Array de pedido"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Pedido"
+        400:
+          description: "Falha nos parâmtros de entrada" 
+    post:
+      x-swagger-router-controller: pedidoController      
+      tags:
+      - "Pedido"
+      summary: "Adiciona pedido"
+      description: "Adiciona pedido"
+      operationId: "addPedido"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Pedido incluido"
+        400:
+          description: "Falha ao incluir pedido"       
+    put:
+      x-swagger-router-controller: pedidoController      
+      tags:
+      - "Pedido"
+      summary: "Atualiza pedido"
+      description: "Atualiza pedido"
+      operationId: "updatePedido"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Categoria atualizada"
+        400:
+          description: "Falha ao incluir Categoria"                  
+    delete:       
+      x-swagger-router-controller: pedidoController      
+      tags:
+      - "Pedido" 
+      summary: "deleta pedido"
+      description: "deleta pedido"
+      operationId: "deleteOrder"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Excluido com sucesso"
+        400:
+          description: "Falha ao excluir pedido"
+  /Pagamento:
+    get:
+      x-swagger-router-controller: pagamentoController
+      tags:
+      - "Pagamento"
+      summary: "Busca um pagamento"
+      description: "retorna uma lista de Pagamento"
+      operationId: "PagamentoGET"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Array de pagamento"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Pagamento"
+        400:
+          description: "Falha nos parâmtros de entrada" 
+    post:
+      x-swagger-router-controller: pagamentoController      
+      tags:
+      - "Pagamento"
+      summary: "Realiza pagamento"
+      description: "Realiza pagamento"
+      operationId: "addPagamento"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Pagamento realizado"
+        400:
+          description: "Falha ao realizar pagamento"       
+    put:
+      x-swagger-router-controller: pagamentoController      
+      tags:
+      - "Pagamento"
+      summary: "Atualiza pagamento"
+      description: "Atualiza pagamento"
+      operationId: "updatePagamento"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Pagamento atualizada"
+        400:
+          description: "Falha ao incluir pagamento"                               
+      
+  /swagger:
+    x-swagger-pipe: swagger_raw
+# complex objects have schema definitions
+definitions:
+  Catalogo:
+    type: "object"
+    required:
+    - "descricao"
+    - "idCategoria"
+    properties:
+      idCategoria:
+        type: "integer"
+        format: "int32"
+        example: 1
+      descricao:
+        type: "string"
+        example: "Alimentação"
+    example:
+      idCategoria: 1
+      descricao: "Alimentação"
+  HelloWorldResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  Pedido:
+    type: "object"
+    properties:
+      idCategoria:
+        type: "integer"
+        format: "int32"
+        example: 1
+      descricao:
+        type: "string"
+        example: "Descrição do Pedido"
+    example:
+      idCategoria: 1
+      descricao: "Descrição do Pedido"      
+  Pagamento:
+    type: "object"
+    properties:
+      idPagamento:
+        type: "integer"
+        format: "int32"
+        example: 1
+      valor:
+        type: "number"
+        example: 20.5
+    example:
+      idCategoria: 1
+      descricao: 20.5   
