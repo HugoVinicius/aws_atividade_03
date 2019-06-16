@@ -21,10 +21,14 @@ http://localhost:3000/docs/
 
 **Imagem da documentação**
 
-<img src="https://github.com/HugoVinicius/aws_atividade_03/blob/master/img/img1.GIF?raw=true"/>
+**Visão Geral**
+<img src="https://github.com/HugoVinicius/aws_atividade_03/blob/master/img/img1.GIF?raw=true"/><br/>
 
-<img src="https://github.com/HugoVinicius/aws_atividade_03/blob/master/img/img2.GIF?raw=true"/>
+**Catalogo**
+<img src="https://github.com/HugoVinicius/aws_atividade_03/blob/master/img/img2.GIF?raw=true"/><br/>
 
-<img src="https://github.com/HugoVinicius/aws_atividade_03/blob/master/img/img3.GIF?raw=true"/>
+**Pedido**
+<img src="https://github.com/HugoVinicius/aws_atividade_03/blob/master/img/img3.GIF?raw=true"/><br/>
 
-<img src="https://github.com/HugoVinicius/aws_atividade_03/blob/master/img/img4.GIF?raw=true"/>
+**Pagamento**
+<img src="https://github.com/HugoVinicius/aws_atividade_03/blob/master/img/img4.GIF?raw=true"/><br/>
