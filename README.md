@@ -21,10 +21,10 @@ http://localhost:3000/docs/
 
 **Imagem da documentação**
 
-<img src="https://github.com/HugoVinicius/aws_atividade_03/img/img1.GIF"/>
+<img src="https://github.com/HugoVinicius/aws_atividade_03/blob/master/img/img1.GIF?raw=true"/>
 
-<img src="https://github.com/HugoVinicius/aws_atividade_03/img/img2.GIF"/>
+<img src="https://github.com/HugoVinicius/aws_atividade_03/blob/master/img/img2.GIF?raw=true"/>
 
-<img src="https://github.com/HugoVinicius/aws_atividade_03/img/img3.GIF"/>
+<img src="https://github.com/HugoVinicius/aws_atividade_03/blob/master/img/img3.GIF?raw=true"/>
 
-<img src="https://github.com/HugoVinicius/aws_atividade_03/img/img4.GIF"/>
+<img src="https://github.com/HugoVinicius/aws_atividade_03/blob/master/img/img4.GIF?raw=true"/>
